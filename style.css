@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;500;600;700&display=swap");
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.125rem;
+    text-transform: uppercase;
+    background: #ffffff;
+    border: 0.0625rem solid #000000;
+    color: #000000;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.heading {
+    font-size: 2.625rem;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: "Fahkwang", sans-serif;
+    display: flex;
+}
+
+#btn-hamburger, #btn-hamburger-close {
+    cursor: pointer;
+    height: 1.5625rem;
+}
+
+
+#btn-hamburger-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+}
+
+.aside {
+    position: absolute;
+    left: -50vw;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    padding: 6.25rem 1.875rem 1.875rem 1.875rem;
+    background-color: #181a20;
+    transition: all 1s ease-in-out;
+}
+
+.aside .nav-mobile {
+    display: none;
+    transition: all 1s ease-in-out;
+}
+
+.aside.active {
+    left: 0;
+    width: 90vw;
+}
+
+.aside.active .nav-mobile {
+    display: block;
+}
+
+.aside.active .nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.aside.active .nav-mobile ul a {
+    font-size: 2rem;
+}
+
+.aside.active .nav-mobile ul a.active {
+    border-bottom: 0.1875rem solid #00d4ff;
+}
+
+.section {
+    padding: 2.5rem;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #181a20;
+    z-index: 4;
+}
+
+.header .container-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 5rem;
+}
+
+.header .logo-text {
+    font-size: 2.625rem;
+    font-weight: 500;
+}
+
+.header .nav-desktop ul {
+    display: flex;
+    gap: 3.125rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.header .nav-desktop ul a {
+    font-size: 1.375rem;
+}
+
+.header .nav-desktop ul a.active {
+    border-bottom: 0.1875rem solid #00d4ff;
+}
+
+
+.main {
+    padding: 5.9375rem 2.5rem 2.5rem;
+}
+
+
+.section-hero {
+    min-height: 70vh;
+    display: flex;
+    background-image: url("../images/bg-pattern.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+}
+
+.section-hero .content, .section-hero .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-hero .content {
+    flex: 1;
+    padding-left: 2.5rem;
+    text-align: justify;
+}
+
+.section-hero .content .heading {
+    font-size: 4rem;
+}
+
+.section-hero .image-container {
+    flex: 1;
+    align-items: center;
+}
+
+.section-hero .image-container img {
+    width: 30%;
+}
+
+.section-hero .btn-cta {
+    width: 15.625rem;
+    margin-top: 3.125rem;
+}
+
+
+.section-heading {
+    text-align: center;
+    padding: 3.125rem 0;
+    text-transform: uppercase;
+}
+
+.section-image-content {
+    display: flex;
+    margin: 2.5rem 0;
+}
+
+.section-image-content .image-container, .section-image-content .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-image-content .image-container {
+    align-items: center;
+}
+
+.section-image-content .image-container img {
+    width: 80%;
+}
+
+.section-image-content .content .subheading {
+    text-align: justify;
+}
+
+.section-image-content .content .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section-image-content .content .btn-cta {
+    margin-top: 3.125rem;
+    width: 15.625rem;
+}
+
+
+.section-gallery .products {
+    display: flex;
+    gap: 1.5625rem;
+}
+
+.section-gallery .products img {
+    width: calc(25% - 1.5625rem);
+}
+
+
+.page-product .section-hero {
+    background-image: url("../images/bg-shop.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+}
+
+.page-product .section-hero .heading {
+    font-size: 7.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.page-product .section-benefits {
+    display: flex;
+    justify-content: center;
+}
+
+.page-product .section-benefits .benefits {
+    display: flex;
+    justify-content: center;
+    gap: 3.125rem;
+}
+
+.page-product .section-benefits .benefits .benefit {
+    width: calc(25% - 1.875rem);
+    box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.07) !important;
+    padding: 1.5625rem;
+}
+
+.page-product .section-benefits .benefits .benefit .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
+
+.page-product .section-benefits .benefits .benefit .text {
+    text-align: justify;
+}
+
+.page-product .section-gallery {
+    margin-top: 3.125rem;
+}
+
+.page-product .section-gallery .products {
+    justify-content: center;
+    gap: 6.25rem;
+}
+
+.page-product .section-gallery .products img {
+    width: calc(25% - 6.25rem);
+}
+
+
+.page-about .section-hero {
+    background-image: url("../images/bg-about.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-about .section-hero .heading {
+    font-size: 7.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.page-about .section-about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+    align-items: center;
+    padding: 6.25rem 25%;
+    text-align: justify;
+}
+
+.footer {
+    margin-top: 3.125rem;
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 1.125rem;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@media only screen and (min-width: 48rem) {
+    #btn-hamburger {
+        display: none;
+    }
+
+    .aside.active {
+        padding: 3.125rem 0;
+        width: 100vw;
+    }
+
+    .section {
+        padding: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 48rem) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .header .container-inner {
+        padding: 1.25rem 0.9375rem;
+        justify-content: start;
+        gap: 1.875rem;
+    }
+
+    .header .nav-desktop {
+        display: none;
+    }
+
+    .main {
+        padding: 5.625rem 1.25rem 1.25rem;
+    }
+
+    .section-hero {
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+    }
+
+    .section-hero .content {
+        padding-left: 0;
+    }
+
+    .section-hero .image-container {
+        display: none;
+    }
+
+    .section-hero .btn-cta {
+        width: 9.375rem;
+    }
+
+    .section-image-content {
+        flex-direction: column;
+    }
+
+    .section-image-content.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .section-image-content .content .btn-cta {
+        margin-top: 1.875rem;
+        width: 9.375rem;
+    }
+
+    .section-gallery .products {
+        flex-direction: column;
+    }
+
+    .section-gallery .products img {
+        width: 100%;
+    }
+
+    .page-product .section-hero {
+        min-height: 20vh;
+    }
+
+    .page-product .section-benefits .benefits .benefit {
+        width: unset;
+    }
+
+    .page-product .section-hero .heading {
+        font-size: 4rem;
+    }
+
+    .page-product .section-benefits .benefits {
+        flex-direction: column;
+    }
+
+    .page-product .section-gallery .products img {
+        width: 100%;
+    }
+
+    .page-about .section-hero {
+        min-height: 80vh;
+    }
+
+    .page-about .section-hero .heading {
+        font-size: 4rem;
+    }
+
+    .page-about .section-about {
+        padding: 3.125rem 1.25rem;
+    }
+}
